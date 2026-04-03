@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-size: 1000px 100%;
+}
+
+/* Card hover effect */
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #0284c7;
+  color: white;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition-property: background-color;
+  transition-duration: 200ms;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0369a1;
+}
+
+.btn-primary:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: #e5e7eb;
+  color: #1f2937;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition-property: background-color;
+  transition-duration: 200ms;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #d1d5db;
+}
+
+.btn-danger {
+  background-color: #dc2626;
+  color: white;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition-property: background-color;
+  transition-duration: 200ms;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background-color: #b91c1c;
+}
+
+/* Input styles */
+.input-field {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  transition-property: all;
+  transition-duration: 200ms;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+/* Badge styles */
+.badge {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+}
+
+.badge-success {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.badge-warning {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.badge-danger {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-info {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
