@@ -1,0 +1,9 @@
+name: Hello CI Workflow
+on: [push]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello! Your automation is working "
